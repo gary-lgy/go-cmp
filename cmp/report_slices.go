@@ -139,6 +139,7 @@ func (opts formatOptions) FormatDiffSlice(v *valueNode) textNode {
 		if isPureLinedText {
 			ssx = strings.Split(sx, "\n")
 			ssy = strings.Split(sy, "\n")
+		/*
 			esLines := diff.Difference(len(ssx), len(ssy), func(ix, iy int) diff.Result {
 				return diff.BoolResult(ssx[ix] == ssy[iy])
 			})
@@ -151,6 +152,7 @@ func (opts formatOptions) FormatDiffSlice(v *valueNode) textNode {
 			unquotedLength := len(sx) + len(sy)
 			escapeExpansionRatio := float64(quotedLength) / float64(unquotedLength)
 			isPureLinedText = efficiencyLines < 4*efficiencyBytes || escapeExpansionRatio > 1.1
+  		*/
 		}
 	}
 
